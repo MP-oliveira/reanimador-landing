@@ -1,0 +1,402 @@
+/* Journey Section - Seção 8 - EXATO DO ORIGINAL */
+
+.journeySection {
+    background: linear-gradient(135deg, #5a5028 0%, #6b6030 50%, #4a4020 100%);
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.journeyBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/assets/fundo.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.floatingElements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.magicCircle {
+    position: absolute;
+    border: 2px solid rgba(212, 184, 94, 0.3);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.circle2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.circle3 {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    left: 80%;
+    animation-delay: 4s;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.journeyHeader {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.journeyBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 184, 94, 0.2);
+    border: 1px solid rgba(212, 184, 94, 0.4);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4b85e;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.journeyBadge .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.journeySection h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+}
+
+.journeyDivider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4b85e 0%, #b8a04c 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.journeyContent {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.journeyText {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 624px;
+}
+
+.storyBlock {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    padding: 30px;
+    background: rgba(90, 80, 40, 0.3);
+    border-radius: 20px;
+    border: 2px solid rgba(184, 160, 76, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.storyBlock:hover {
+    background: rgba(184, 160, 76, 0.1);
+    border-color: #d4b85e;
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.storyIcon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.storyIcon svg {
+    width: 24px;
+    height: 24px;
+    color: #2a2410;
+}
+
+.storyBlock p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    font-weight: 400;
+    margin: 0;
+}
+
+.storyBlock strong {
+    color: #d4b85e;
+    font-weight: 600;
+}
+
+.journeyVisual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magicalBookContainer {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.bookGlow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.3) 0%, transparent 70%);
+    border-radius: 30px;
+    animation: magicalGlow 4s ease-in-out infinite, float 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+.magicalBook3d {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+    z-index: 2;
+}
+
+.bookCover3d {
+    width: 100%;
+    height: 100%;
+    background: url("/assets/fundo.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    border: 3px solid #d4b85e;
+    position: relative;
+    overflow: hidden;
+}
+
+.bookCover3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(74, 64, 40, 0.7) 0%, rgba(106, 96, 72, 0.7) 100%);
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.bookCover3d > * {
+    position: relative;
+    z-index: 2;
+}
+
+.bookTitle3d {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #d4b85e;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bookSubtitle3d {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.bookAuthor3d {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    color: #d4b85e;
+    font-style: italic;
+}
+
+.magicalSymbols {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.symbol {
+    font-size: 1.2rem;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.symbol1 { animation-delay: 0s; }
+.symbol2 { animation-delay: 1s; }
+.symbol3 { animation-delay: 2s; }
+
+
+.magicalParticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #d4b85e;
+    border-radius: 50%;
+    animation: sparkle 4s ease-in-out infinite;
+}
+
+.particle1 {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.particle2 {
+    top: 30%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.particle3 {
+    bottom: 40%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.particle4 {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 3s;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes magicalGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 184, 94, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(212, 184, 94, 0.6), 0 0 60px rgba(212, 184, 94, 0.3); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .journeySection {
+        padding: 80px 20px;
+    }
+    
+    .journeyHeader {
+        margin-bottom: 60px;
+    }
+    
+    .journeySection h2 {
+        font-size: 2.5rem;
+    }
+    
+    .journeyContent {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+    
+    .magicalBookContainer {
+        width: 200px;
+        height: 280px;
+    }
+    
+    .storyBlock {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .storyBlock:hover {
+        transform: translateY(-5px);
+    }
+    
+    .storyBlock p {
+        font-size: 1.1rem;
+    }
+    
+    .storyIcon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .storyIcon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .bookTitle3d {
+        font-size: 1.8rem;
+    }
+    
+    .bookSubtitle3d {
+        font-size: 0.9rem;
+    }
+    
+    .bookAuthor3d {
+        font-size: 0.8rem;
+    }
+}
