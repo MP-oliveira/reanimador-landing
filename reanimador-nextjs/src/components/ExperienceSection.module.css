@@ -1,0 +1,572 @@
+/* Experience Section - Seção 4 - Uma Experiência Única de Leitura */
+.experienceSection {
+    background: linear-gradient(135deg, #f5f5dc 0%, #e6e6c7 100%);
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.experienceBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/assets/fundo.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.readingElements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.magicScroll {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    background: rgba(212, 184, 94, 0.1);
+    border-radius: 10px;
+    border: 2px solid rgba(212, 184, 94, 0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+.scroll1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.scroll2 {
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.scroll3 {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experienceHeader {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.experienceBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 184, 94, 0.2);
+    border: 1px solid rgba(212, 184, 94, 0.4);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4b85e;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.experienceBadge .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.experienceTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #2a2410;
+    position: relative;
+}
+
+.experienceDivider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4b85e 0%, #b8a04c 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.experienceContent {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.experienceVisual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magicalReadingScene {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floatingBooks {
+    position: relative;
+    width: 320px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.magicBook {
+    position: absolute;
+    width: 220px;
+    height: 330px;
+    border-radius: 8px;
+    border: 2px solid #d4b85e;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+.magicBook1 {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    animation-delay: 0s;
+    transform: rotate(-5deg);
+}
+
+.magicBook2 {
+    top: 25px;
+    left: 50px;
+    z-index: 2;
+    animation-delay: 1s;
+    transform: rotate(2deg);
+}
+
+.magicBook3 {
+    top: 50px;
+    left: 100px;
+    z-index: 1;
+    animation-delay: 2s;
+    transform: rotate(-2deg);
+}
+
+.experienceBookImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+}
+
+.bookCoverGlow {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, rgba(212, 184, 94, 0.3), rgba(184, 160, 76, 0.3));
+    border-radius: 12px;
+    filter: blur(8px);
+    animation: magicalGlow 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+.bookShadow {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    filter: blur(8px);
+    z-index: -2;
+}
+
+.magicalParticlesExperience {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particleExperience {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #d4b85e;
+    border-radius: 50%;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.particleExp1 {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.particleExp2 {
+    top: 30%;
+    right: 20%;
+    animation-delay: 0.5s;
+}
+
+.particleExp3 {
+    bottom: 40%;
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.particleExp4 {
+    bottom: 20%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.particleExp5 {
+    top: 50%;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.readingAura {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.auraCircle {
+    position: absolute;
+    border: 2px solid rgba(212, 184, 94, 0.3);
+    border-radius: 50%;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.aura1 {
+    top: 20%;
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.aura2 {
+    top: 40%;
+    right: 25%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 1s;
+}
+
+.aura3 {
+    bottom: 30%;
+    left: 40%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 2s;
+}
+
+.magicalElements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.magicLine {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #d4b85e 50%, transparent 100%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.line1 {
+    top: 25%;
+    left: 0;
+    width: 80%;
+    animation-delay: 0s;
+}
+
+.line2 {
+    top: 50%;
+    right: 0;
+    width: 60%;
+    animation-delay: 1s;
+}
+
+.line3 {
+    bottom: 30%;
+    left: 10%;
+    width: 70%;
+    animation-delay: 2s;
+}
+
+.experienceText {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.quoteContainer {
+    position: relative;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: 3px solid rgba(212, 184, 94, 0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quoteIcon {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(212, 184, 94, 0.3);
+}
+
+.quoteIcon svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.experienceQuote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #2a2410;
+    font-style: italic;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experienceDescription {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    border: 2px solid rgba(212, 184, 94, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.descriptionIcon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.descriptionIcon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.experienceDescription p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #3a3520;
+    font-weight: 400;
+    margin: 0;
+}
+
+.experienceDescription strong {
+    color: #d4b85e;
+    font-weight: 600;
+}
+
+.readingBenefits {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    border: 2px solid rgba(212, 184, 94, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    flex: 1;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px;
+    border-color: rgb(212, 184, 94);
+}
+
+.benefitIcon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefitIcon svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.benefit span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2a2410;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes magicalGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 184, 94, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(212, 184, 94, 0.6), 0 0 60px rgba(212, 184, 94, 0.3); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .experienceSection {
+        padding: 80px 20px;
+    }
+
+    .experienceTitle {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .experienceContent {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .magicalReadingScene {
+        width: 320px;
+        height: 320px;
+    }
+
+    .floatingBooks {
+        width: 250px;
+        height: 300px;
+    }
+
+    .magicBook {
+        width: 150px;
+        height: 220px;
+    }
+
+    .readingBenefits {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .benefit {
+        padding: 15px;
+    }
+
+    .quoteContainer {
+        padding: 25px;
+    }
+
+    .experienceQuote {
+        font-size: 1.1rem;
+        padding-left: 15px;
+    }
+
+    .experienceDescription {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .experienceDescription p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .magicalReadingScene {
+        width: 280px;
+        height: 280px;
+    }
+
+    .floatingBooks {
+        width: 200px;
+        height: 250px;
+    }
+
+    .magicBook {
+        width: 120px;
+        height: 180px;
+    }
+
+    .quoteContainer {
+        padding: 20px;
+    }
+
+    .experienceDescription {
+        padding: 15px;
+    }
+}
