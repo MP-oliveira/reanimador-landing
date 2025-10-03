@@ -3466,3 +3466,13 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* Seção 9: Sobre F.S. Turco - COM FOTO SIMPLES */
+.author-photo-simple {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+}
