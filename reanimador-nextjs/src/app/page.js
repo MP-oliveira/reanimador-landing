@@ -1,6 +1,7 @@
 import HeroSection from '../components/HeroSection'
 import JourneySection from '../components/JourneySection'
 import PowerSection from '../components/PowerSection'
+import DiscoverySection from '../components/DiscoverySection'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <JourneySection />
       <PowerSection />
+      <DiscoverySection />
       {/* Outras seções virão aqui */}
     </>
   )

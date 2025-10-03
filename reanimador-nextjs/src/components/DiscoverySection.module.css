@@ -1,0 +1,509 @@
+/* Discovery Section - Seção 7 - EXATO DO ORIGINAL */
+
+.discoverySection {
+    background: linear-gradient(135deg, #f5f5dc 0%, #e6e6c7 100%);
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.discoveryBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/assets/fundo.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.magicalParticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #d4b85e;
+    border-radius: 50%;
+    animation: sparkle 4s ease-in-out infinite;
+}
+
+.particle1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.particle2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.8s;
+}
+
+.particle3 {
+    top: 60%;
+    left: 20%;
+    animation-delay: 1.6s;
+}
+
+.particle4 {
+    bottom: 30%;
+    right: 25%;
+    animation-delay: 2.4s;
+}
+
+.particle5 {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 3.2s;
+}
+
+.particle6 {
+    top: 40%;
+    right: 30%;
+    animation-delay: 4s;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.discoveryHeader {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.discoveryBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 184, 94, 0.2);
+    border: 1px solid rgba(212, 184, 94, 0.4);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4b85e;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.discoveryBadge .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.discoverySection h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2a2410;
+    position: relative;
+}
+
+.discoveryDivider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4b85e 0%, #b8a04c 100%);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.discoverySubtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #3a3520;
+    font-style: italic;
+    margin: 0;
+}
+
+.interactiveDiscovery {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.centralHub {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.hubCore {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    border: 4px solid #2a2410;
+    box-shadow: 0 0 40px rgba(212, 184, 94, 0.5);
+    animation: float 6s ease-in-out infinite;
+}
+
+.coreGlow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: magicalGlow 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+.coreText {
+    text-align: center;
+    z-index: 2;
+}
+
+.coreTitle {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2a2410;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.coreSubtitle {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: #2a2410;
+    font-weight: 500;
+}
+
+.corePulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border: 2px solid rgba(212, 184, 94, 0.3);
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.discoveryOrbits {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; /* Órbitas ficam atrás do texto mas na frente do background */
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    border: 2px dashed rgba(212, 184, 94, 0.3);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.orbit1 {
+    width: 200px;
+    height: 200px;
+    animation-duration: 15s;
+}
+
+.orbit2 {
+    width: 280px;
+    height: 280px;
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+.orbit3 {
+    width: 360px;
+    height: 360px;
+    animation-duration: 25s;
+}
+
+.orbit4 {
+    width: 440px;
+    height: 440px;
+    animation-duration: 30s;
+    animation-direction: reverse;
+}
+
+.discoveryElement {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #d4b85e;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.discoveryElement:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(212, 184, 94, 0.3);
+    background: rgba(255, 255, 255, 1);
+}
+
+.elementIcon {
+    width: 30px;
+    height: 30px;
+    color: #d4b85e;
+    transition: transform 0.3s ease;
+}
+
+.discoveryElement:hover .elementIcon {
+    transform: scale(1.1);
+}
+
+.elementGlow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: magicalGlow 3s ease-in-out infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.discoveryElement:hover .elementGlow {
+    opacity: 1;
+}
+
+.element1 {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.element2 {
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+}
+
+.element3 {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.element4 {
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+.discoveryPanel {
+    position: relative;
+    width: 524px;
+    height: 494px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    border: 3px solid #d4b85e;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    z-index: 15; /* Panel fica na frente das órbitas */
+}
+
+.panelContent {
+    padding: 40px;
+    width: 100%;
+}
+
+.contentHeader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contentIcon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentIcon svg {
+    width: 20px;
+    height: 20px;
+    color: #2a2410;
+}
+
+.contentHeader h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2a2410;
+    margin: 0;
+}
+
+.contentJourney p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #3a3520;
+    margin-bottom: 30px;
+}
+
+.contentStats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.statItem {
+    padding: 12px 16px;
+    background: rgba(212, 184, 94, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(212, 184, 94, 0.2);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgb(212, 184, 94);
+    font-weight: 500;
+    text-align: left;
+}
+
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes magicalGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 184, 94, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(212, 184, 94, 0.6), 0 0 60px rgba(212, 184, 94, 0.3); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.3;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .discoverySection {
+        padding: 80px 20px;
+    }
+    
+    .discoverySection h1 {
+        font-size: 2rem;
+    }
+    
+    .interactiveDiscovery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .centralHub {
+        height: 350px;
+        order: 1;
+    }
+    
+    .discoveryOrbits {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+    }
+    
+    .orbit {
+        border: 1px dashed rgba(212, 184, 94, 0.2);
+    }
+    
+    .orbit1 { width: 150px; height: 150px; }
+    .orbit2 { width: 200px; height: 200px; }
+    .orbit3 { width: 250px; height: 250px; }
+    .orbit4 { width: 300px; height: 300px; }
+    
+    .discoveryElement {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .elementIcon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .discoveryPanel {
+        height: auto;
+        min-height: 350px;
+        order: 2;
+    }
+    
+    .panelContent {
+        padding: 20px;
+    }
+    
+    .contentHeader h3 {
+        font-size: 1.5rem;
+    }
+}
