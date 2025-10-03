@@ -1030,6 +1030,25 @@ body {
     animation: float 3s ease-in-out infinite;
 }
 
+/* Links sem sublinhado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
 /* E-book Image Container */
 .ebook-image-container {
     position: relative;
