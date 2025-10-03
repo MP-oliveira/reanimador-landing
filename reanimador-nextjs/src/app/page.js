@@ -4,6 +4,7 @@ import PowerSection from '../components/PowerSection'
 import ExperienceSection from '../components/ExperienceSection'
 import DiscoverySection from '../components/DiscoverySection'
 import AuthorSection from '../components/AuthorSection'
+import ChoiceSection from '../components/ChoiceSection'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <DiscoverySection />
       <AuthorSection />
       <ExperienceSection />
+      <ChoiceSection />
       {/* Outras seções virão aqui */}
     </>
   )
