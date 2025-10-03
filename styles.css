@@ -174,35 +174,34 @@ body {
 }
 
 .book-cover {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #4a4028 0%, #6a6048 100%);
-    border-radius: 15px;
+    width: 100% !important;
+    height: 100% !important;
+    background: #0d1a0d !important;
+    border-radius: 15px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 0 !important;
     position: relative;
-    border: 3px solid #d4b85e;
+    border: none !important;
+    box-shadow: none !important;
     animation: float 4s ease-in-out infinite;
+    overflow: hidden;
 }
 
-.book-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #d4b85e;
-    margin-bottom: 10px;
+.book-cover-image {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 15px;
+    margin: 2.5%;
 }
 
-.book-subtitle {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: #f0f0f0;
-    font-weight: 400;
-}
+/* Títulos do livro agora são parte da imagem da capa */
 
 .magical-glow {
     position: absolute;
@@ -1118,19 +1117,419 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-/* Seção 5: Por Que Escolher Reanimador */
+/* Seção 5: Por Que Escolher Reanimador - REDESENHADA */
 .section-5 {
-    background: #5a5028;
-    padding: 100px 20px;
+    background: linear-gradient(135deg, #5a5028 0%, #6b6030 50%, #4a4020 100%);
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.choice-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("assets/fundo.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.choice-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.magic-star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #d4b85e 0%, transparent 70%);
+    border-radius: 50%;
+    animation: sparkle 4s ease-in-out infinite;
+}
+
+.star-1 {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 25%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.star-3 {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.star-4 {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 3s;
+}
+
+.section-5 .container {
+    position: relative;
+    z-index: 2;
+}
+
+.choice-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.choice-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 184, 94, 0.2);
+    border: 1px solid rgba(212, 184, 94, 0.4);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4b85e;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.choice-badge .icon {
+    width: 16px;
+    height: 16px;
 }
 
 .section-5 h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+}
+
+.choice-divider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4b85e 0%, #b8a04c 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.choice-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.choice-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magical-choice-scene {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice-gem {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gem-core {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 0 30px rgba(212, 184, 94, 0.5);
+}
+
+.gem-facets {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.facet {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.facet-1 {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.facet-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.7s;
+}
+
+.facet-3 {
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 1.4s;
+}
+
+.facet-4 {
+    bottom: 15%;
+    right: 20%;
+    animation-delay: 2.1s;
+}
+
+.gem-glow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: magicalGlow 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+.floating-benefits {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.benefit-float {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px;
+    background: rgba(90, 80, 40, 0.3);
+    border-radius: 15px;
+    border: 2px solid rgba(184, 160, 76, 0.3);
+    backdrop-filter: blur(10px);
+    animation: float 5s ease-in-out infinite;
+}
+
+.benefit-float svg {
+    width: 24px;
+    height: 24px;
+    color: #d4b85e;
+}
+
+.benefit-float span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
     color: #fff;
     text-align: center;
+}
+
+.benefit-1 {
+    top: 5%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.benefit-2 {
+    top: 10%;
+    right: 5%;
+    animation-delay: 1.25s;
+}
+
+.benefit-3 {
+    bottom: 15%;
+    left: 5%;
+    animation-delay: 2.5s;
+}
+
+.benefit-4 {
+    bottom: 5%;
+    right: 10%;
+    animation-delay: 3.75s;
+}
+
+.magical-connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.connection {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4b85e, transparent);
+    animation: connectionPulse 3s ease-in-out infinite;
+}
+
+.connection-1 {
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    transform: rotate(45deg) translateX(-50%);
+    animation-delay: 0s;
+}
+
+.connection-2 {
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    transform: rotate(-45deg) translateX(-50%);
+    animation-delay: 0.75s;
+}
+
+.connection-3 {
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    transform: rotate(135deg) translateX(-50%);
+    animation-delay: 1.5s;
+}
+
+.connection-4 {
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    transform: rotate(-135deg) translateX(-50%);
+    animation-delay: 2.25s;
+}
+
+@keyframes connectionPulse {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.choice-card {
+    background: rgba(90, 80, 40, 0.4);
+    border: 3px solid rgba(184, 160, 76, 0.3);
+    padding: 40px 35px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+}
+
+.choice-card:hover {
+    background: rgba(184, 160, 76, 0.1);
+    border-color: #d4b85e;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.choice-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(212, 184, 94, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.choice-card:hover::before {
+    opacity: 1;
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.choice-card:hover .card-icon {
+    transform: scale(1.1);
+}
+
+.card-icon svg {
+    width: 28px;
+    height: 28px;
+    color: #2a2410;
+}
+
+.choice-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.choice-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+
+.card-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.2) 0%, transparent 70%);
+    border-radius: 25px;
+    animation: magicalGlow 3s ease-in-out infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.choice-card:hover .card-glow {
+    opacity: 1;
 }
 
 .grid-2x2 {
@@ -1220,16 +1619,18 @@ body {
     border-radius: 2px;
 }
 
-/* Seção 7: O Que Você Vai Encontrar Neste Livro - TOM CLARO */
+/* Seção 7: O Que Você Vai Encontrar Neste Livro - INTERATIVA INOVADORA */
 .section-7 {
     background: linear-gradient(135deg, #f5f5dc 0%, #e6e6c7 100%);
     padding: 120px 20px;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.section-7::before {
-    content: "";
+.discovery-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -1241,31 +1642,436 @@ body {
     z-index: 1;
 }
 
+.magical-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #d4b85e;
+    border-radius: 50%;
+    animation: sparkle 4s ease-in-out infinite;
+}
+
+.particle-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.particle-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.8s;
+}
+
+.particle-3 {
+    top: 60%;
+    left: 20%;
+    animation-delay: 1.6s;
+}
+
+.particle-4 {
+    bottom: 30%;
+    right: 25%;
+    animation-delay: 2.4s;
+}
+
+.particle-5 {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 3.2s;
+}
+
+.particle-6 {
+    top: 40%;
+    right: 30%;
+    animation-delay: 4s;
+}
+
 .section-7 .container {
     position: relative;
     z-index: 2;
+    width: 100%;
+}
+
+.discovery-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.discovery-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 184, 94, 0.2);
+    border: 1px solid rgba(212, 184, 94, 0.4);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4b85e;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.discovery-badge .icon {
+    width: 16px;
+    height: 16px;
 }
 
 .section-7 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     color: #2a2410;
-    text-align: center;
     position: relative;
 }
 
-.section-7 h1::after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
+.discovery-divider {
+    width: 120px;
     height: 3px;
     background: linear-gradient(90deg, #d4b85e 0%, #b8a04c 100%);
+    margin: 0 auto 20px;
     border-radius: 2px;
+}
+
+.discovery-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #3a3520;
+    font-style: italic;
+    margin: 0;
+}
+
+.interactive-discovery {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.central-hub {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.hub-core {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    border: 4px solid #2a2410;
+    box-shadow: 0 0 40px rgba(212, 184, 94, 0.5);
+    animation: float 6s ease-in-out infinite;
+}
+
+.core-glow {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: magicalGlow 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+.core-text {
+    text-align: center;
+    z-index: 2;
+}
+
+.core-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2a2410;
+    display: block;
+    line-height: 1;
+}
+
+.core-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: #2a2410;
+    display: block;
+    margin-top: 2px;
+}
+
+.core-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border: 2px solid rgba(212, 184, 94, 0.3);
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.3;
+    }
+}
+
+.discovery-orbits {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px dashed rgba(212, 184, 94, 0.3);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.orbit-1 {
+    width: 200px;
+    height: 200px;
+    animation-duration: 15s;
+}
+
+.orbit-2 {
+    width: 280px;
+    height: 280px;
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+.orbit-3 {
+    width: 360px;
+    height: 360px;
+    animation-duration: 25s;
+}
+
+.orbit-4 {
+    width: 440px;
+    height: 440px;
+    animation-duration: 30s;
+    animation-direction: reverse;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.discovery-element {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #d4b85e;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.discovery-element:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(212, 184, 94, 0.3);
+    background: rgba(255, 255, 255, 1);
+}
+
+.element-icon {
+    width: 30px;
+    height: 30px;
+    color: #d4b85e;
+    transition: transform 0.3s ease;
+}
+
+.discovery-element:hover .element-icon {
+    transform: scale(1.1);
+}
+
+.element-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: magicalGlow 3s ease-in-out infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.discovery-element:hover .element-glow {
+    opacity: 1;
+}
+
+.element-1 {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.element-2 {
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+}
+
+.element-3 {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.element-4 {
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+.discovery-panel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    border: 3px solid #d4b85e;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.panel-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-hidden {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.content-journey:not(.content-hidden),
+.content-hero:not(.content-hidden),
+.content-universe:not(.content-hidden),
+.content-fantasy:not(.content-hidden) {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.content-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #2a2410;
+}
+
+.content-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2a2410;
+    margin: 0;
+}
+
+.content-journey p,
+.content-hero p,
+.content-universe p,
+.content-fantasy p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #3a3520;
+    margin-bottom: 20px;
+}
+
+.content-highlight {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.content-highlight span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #d4b85e;
+    font-weight: 600;
+    padding: 5px 10px;
+    background: rgba(212, 184, 94, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(212, 184, 94, 0.2);
 }
 
 .feature-card {
@@ -2041,5 +2847,622 @@ footer {
     
     .floating-letters {
         display: none;
+    }
+    
+    /* Ajustes específicos para seção 5 */
+    .choice-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+    
+    .magical-choice-scene {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .choice-gem {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .gem-core {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .choice-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .choice-card {
+        padding: 30px 25px;
+    }
+    
+    .benefit-float {
+        padding: 10px;
+    }
+    
+    .benefit-float span {
+        font-size: 0.7rem;
+    }
+    
+    .magical-connections {
+        display: none;
+    }
+    
+    /* Ajustes específicos para seção 7 interativa */
+    .interactive-discovery {
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 20px 0;
+    }
+    
+    .central-hub {
+        height: 350px;
+        order: 1;
+    }
+    
+    .discovery-orbits {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+    }
+    
+    .orbit {
+        border: 1px dashed rgba(212, 184, 94, 0.2);
+    }
+    
+    .orbit-1 { width: 150px; height: 150px; }
+    .orbit-2 { width: 200px; height: 200px; }
+    .orbit-3 { width: 250px; height: 250px; }
+    .orbit-4 { width: 300px; height: 300px; }
+    
+    .discovery-element {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .element-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .discovery-panel {
+        height: auto;
+        min-height: 350px;
+        order: 2;
+    }
+    
+    .panel-content {
+        padding: 20px;
+    }
+    
+    .content-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .content-journey p,
+    .content-hero p,
+    .content-universe p,
+    .content-fantasy p {
+        font-size: 1rem;
+    }
+}
+
+/* Seção Preview - LIVRO INTERATIVO ÚNICO */
+.section-preview {
+    background: linear-gradient(135deg, #2a2410 0%, #1a1610 100%);
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.preview-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("assets/fundo.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.magical-atmosphere {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.floating-word {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(212, 184, 94, 0.3);
+    animation: float 8s ease-in-out infinite;
+    text-shadow: 0 0 20px rgba(212, 184, 94, 0.3);
+}
+
+.word-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.word-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.word-3 {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.word-4 {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 6s;
+}
+
+.preview-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.preview-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 184, 94, 0.2);
+    border: 1px solid rgba(212, 184, 94, 0.4);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4b85e;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.preview-badge .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.preview-divider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4b85e 0%, #b8a04c 100%);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.preview-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #c4b896;
+    font-style: italic;
+    margin: 0;
+}
+
+.interactive-book-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.book-stand {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.book-base {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(90deg, #8b7355 0%, #a68b5b 50%, #8b7355 100%);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-spine {
+    position: absolute;
+    bottom: 20px;
+    width: 15px;
+    height: 500px;
+    background: linear-gradient(180deg, #654321 0%, #8b4513 50%, #654321 100%);
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.magical-book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+}
+
+.book-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #8b4513 100%);
+    border-radius: 8px;
+    border: 3px solid #654321;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    transform: rotateY(-5deg);
+    transform-origin: left center;
+    transition: transform 0.8s ease;
+}
+
+.book-cover:hover {
+    transform: rotateY(-10deg) translateZ(20px);
+}
+
+.cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #d4b85e;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cover-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f5f5dc;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cover-author {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #c4b896;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cover-glow {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.2) 0%, transparent 70%);
+    border-radius: 12px;
+    animation: magicalGlow 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+.book-pages-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f5f5dc;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform-origin: left center;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+.page.active {
+    opacity: 1;
+    transform: rotateY(0deg);
+    z-index: 10;
+}
+
+.page-content {
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    color: #2a2410;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #d4b85e;
+}
+
+.chapter-number {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #d4b85e;
+    margin-bottom: 5px;
+}
+
+.chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2a2410;
+}
+
+.page-text {
+    flex: 1;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.page-text p {
+    margin-bottom: 20px;
+}
+
+.page-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #d4b85e;
+    text-align: center;
+}
+
+.page-number {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #d4b85e;
+}
+
+.page-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.1) 0%, transparent 70%);
+    border-radius: 8px;
+    animation: magicalGlow 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+.book-controls {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 184, 94, 0.3);
+}
+
+.page-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid #d4b85e;
+    color: #d4b85e;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+    background: #d4b85e;
+    color: #2a2410;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 184, 94, 0.3);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.page-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.page-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #d4b85e;
+    font-weight: 600;
+}
+
+.current-page {
+    background: #d4b85e;
+    color: #2a2410;
+    padding: 5px 10px;
+    border-radius: 15px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.separator {
+    opacity: 0.7;
+}
+
+.total-pages {
+    opacity: 0.7;
+}
+
+.reading-experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    border: 3px solid #d4b85e;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    max-width: 400px;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.card-icon svg {
+    width: 30px;
+    height: 30px;
+    color: #2a2410;
+}
+
+.experience-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2a2410;
+    margin-bottom: 20px;
+}
+
+.experience-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #3a3520;
+    margin-bottom: 25px;
+}
+
+.experience-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.experience-highlights span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #d4b85e;
+    font-weight: 600;
+    padding: 8px 15px;
+    background: rgba(212, 184, 94, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(212, 184, 94, 0.2);
+}
+
+/* Responsividade para Preview */
+@media (max-width: 768px) {
+    .interactive-book-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .book-stand {
+        height: 400px;
+    }
+    
+    .magical-book {
+        width: 280px;
+        height: 400px;
+    }
+    
+    .book-base {
+        width: 320px;
+    }
+    
+    .book-spine {
+        height: 380px;
+    }
+    
+    .cover-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-content {
+        padding: 25px;
+    }
+    
+    .chapter-title {
+        font-size: 1.5rem;
+    }
+    
+    .page-text {
+        font-size: 0.9rem;
+    }
+    
+    .book-controls {
+        bottom: -60px;
+        gap: 20px;
+        padding: 12px 20px;
+    }
+    
+    .page-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .experience-card {
+        padding: 25px;
+    }
+    
+    .experience-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .experience-card p {
+        font-size: 1rem;
     }
 }

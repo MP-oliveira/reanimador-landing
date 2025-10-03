@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20241203-11">
 </head>
 <body>
     <!-- Seção 1: E se as histórias que você amô pudessem ganhar vida? -->
@@ -50,8 +50,7 @@
             <div class="hero-visual">
                 <div class="magical-book">
                     <div class="book-cover">
-                        <div class="book-title">Reanimador</div>
-                        <div class="book-subtitle">O Nascimento de um Herói</div>
+                        <img src="assets/capa.png" alt="Capa do livro Reanimador - O Nascimento de um Herói" class="book-cover-image">
                         <div class="magical-glow"></div>
                     </div>
                     <div class="floating-elements">
@@ -164,57 +163,168 @@
 
     <!-- Seção 4: O Que Você Vai Encontrar Neste Livro -->
     <section class="section-7">
+        <div class="discovery-background">
+            <div class="magical-particles">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+            </div>
+        </div>
         <div class="container">
-            <h1>O Que Você Vai Encontrar Neste Livro</h1>
+            <div class="discovery-header">
+                <div class="discovery-badge">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>Descobertas Inesperadas</span>
+                </div>
+                <h1>O Que Você Vai Encontrar Neste Livro</h1>
+                <div class="discovery-divider"></div>
+                <p class="discovery-subtitle">Passe o mouse sobre os elementos para descobrir os segredos que aguardam</p>
+            </div>
             
-            <div class="grid-2x2">
-                <div class="feature-card">
-                    <div class="icon-circle">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                            <path d="M8 7h8"/>
-                            <path d="M8 11h8"/>
-                            <path d="M8 15h5"/>
-                        </svg>
+            <div class="interactive-discovery">
+                <div class="central-hub">
+                    <div class="hub-core">
+                        <div class="core-glow"></div>
+                        <div class="core-text">
+                            <span class="core-title">REANIMADOR</span>
+                            <span class="core-subtitle">O Livro</span>
+                        </div>
+                        <div class="core-pulse"></div>
                     </div>
-                    <h3>Jornada Épica</h3>
-                    <p>Uma aventura de fantasia e mistério que vai prender você da primeira à última página</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="icon-circle">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
+                <div class="discovery-orbits">
+                    <div class="orbit orbit-1">
+                        <div class="discovery-element element-1" data-content="journey">
+                            <div class="element-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                    <path d="M8 7h8"/>
+                                    <path d="M8 11h8"/>
+                                    <path d="M8 15h5"/>
+                                </svg>
+                            </div>
+                            <div class="element-glow"></div>
+                        </div>
                     </div>
-                    <h3>Herói Único</h3>
-                    <p>Um protagonista capaz de dar vida a lendas e histórias dos livros mais antigos</p>
+                    
+                    <div class="orbit orbit-2">
+                        <div class="discovery-element element-2" data-content="hero">
+                            <div class="element-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="element-glow"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="orbit orbit-3">
+                        <div class="discovery-element element-3" data-content="universe">
+                            <div class="element-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                    <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                                </svg>
+                            </div>
+                            <div class="element-glow"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="orbit orbit-4">
+                        <div class="discovery-element element-4" data-content="fantasy">
+                            <div class="element-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                    <path d="M12 7v6"/>
+                                    <path d="M12 17h.01"/>
+                                </svg>
+                            </div>
+                            <div class="element-glow"></div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="icon-circle">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-                            <line x1="12" y1="22.08" x2="12" y2="12"/>
-                        </svg>
+                <div class="discovery-panel">
+                    <div class="panel-content">
+                        <div class="content-journey content-hidden" data-target="journey">
+                            <div class="content-header">
+                                <div class="content-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                    </svg>
+                                </div>
+                                <h3>Jornada Épica</h3>
+                            </div>
+                            <p>Uma aventura de fantasia e mistério que vai prender você da primeira à última página. Cada capítulo revela novos segredos e desafios que testarão os limites da imaginação.</p>
+                            <div class="content-highlight">
+                                <span>✨ 25+ Capítulos</span>
+                                <span>📖 400+ Páginas</span>
+                                <span>🎭 Múltiplas Reviravoltas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="content-hero content-hidden" data-target="hero">
+                            <div class="content-header">
+                                <div class="content-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3>Herói Único</h3>
+                            </div>
+                            <p>Richard Edward Jones possui um poder único: dar vida às histórias. Um protagonista complexo que cresce ao longo da jornada, descobrindo que com grandes poderes vêm grandes responsabilidades.</p>
+                            <div class="content-highlight">
+                                <span>🌟 Protagonista Complexo</span>
+                                <span>⚡ Poderes Únicos</span>
+                                <span>💫 Desenvolvimento Profundo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="content-universe content-hidden" data-target="universe">
+                            <div class="content-header">
+                                <div class="content-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                    </svg>
+                                </div>
+                                <h3>Universo Fascinante</h3>
+                            </div>
+                            <p>Um mundo onde a linha entre ficção e realidade se dissolve. Lugares mágicos, criaturas lendárias e mistérios antigos aguardam sua descoberta em cada página virada.</p>
+                            <div class="content-highlight">
+                                <span>🌍 Mundos Paralelos</span>
+                                <span>🐉 Criaturas Lendárias</span>
+                                <span>🔮 Magia e Mistério</span>
+                            </div>
+                        </div>
+                        
+                        <div class="content-fantasy content-hidden" data-target="fantasy">
+                            <div class="content-header">
+                                <div class="content-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                    </svg>
+                                </div>
+                                <h3>Para Fãs de Fantasia</h3>
+                            </div>
+                            <p>Perfeito para admiradores de Senhor dos Anéis, As Crônicas de Nárnia e Harry Potter. Uma homenagem aos grandes mestres da fantasia com uma narrativa completamente original.</p>
+                            <div class="content-highlight">
+                                <span>📚 Referências Clássicas</span>
+                                <span>🎨 Narrativa Original</span>
+                                <span>❤️ Feito com Amor</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Universo Fascinante</h3>
-                    <p>Um mundo que mistura imaginação, aventura e perigo em cada esquina</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="icon-circle">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                            <path d="M12 7v6"/>
-                            <path d="M12 17h.01"/>
-                        </svg>
-                    </div>
-                    <h3>Para Fãs de Fantasia</h3>
-                    <p>Perfeito para admiradores de Senhor dos Anéis e As Crônicas de Nárnia</p>
                 </div>
             </div>
         </div>
@@ -354,28 +464,120 @@
 
     <!-- Seção 7: Por Que Escolher Reanimador -->
     <section class="section-5">
+        <div class="choice-background">
+            <div class="choice-elements">
+                <div class="magic-star star-1"></div>
+                <div class="magic-star star-2"></div>
+                <div class="magic-star star-3"></div>
+                <div class="magic-star star-4"></div>
+            </div>
+        </div>
         <div class="container">
-            <h2>Por Que Escolher Reanimador</h2>
+            <div class="choice-header">
+                <div class="choice-badge">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span>Escolha Inteligente</span>
+                </div>
+                <h2>Por Que Escolher Reanimador</h2>
+                <div class="choice-divider"></div>
+            </div>
             
-            <div class="grid-2x2">
-                <div class="grid-card">
-                    <h3>Originalidade</h3>
-                    <p>Uma premissa única que você não encontrará em nenhum outro lugar</p>
+            <div class="choice-content">
+                <div class="choice-visual">
+                    <div class="magical-choice-scene">
+                        <div class="choice-gem">
+                            <div class="gem-core"></div>
+                            <div class="gem-facets">
+                                <div class="facet facet-1"></div>
+                                <div class="facet facet-2"></div>
+                                <div class="facet facet-3"></div>
+                                <div class="facet facet-4"></div>
+                            </div>
+                            <div class="gem-glow"></div>
+                        </div>
+                        <div class="floating-benefits">
+                            <div class="benefit-float benefit-1">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <span>Originalidade</span>
+                            </div>
+                            <div class="benefit-float benefit-2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                                <span>Emoção</span>
+                            </div>
+                            <div class="benefit-float benefit-3">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                                <span>Nostalgia</span>
+                            </div>
+                            <div class="benefit-float benefit-4">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                </svg>
+                                <span>Aventura</span>
+                            </div>
+                        </div>
+                        <div class="magical-connections">
+                            <div class="connection connection-1"></div>
+                            <div class="connection connection-2"></div>
+                            <div class="connection connection-3"></div>
+                            <div class="connection connection-4"></div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="grid-card">
-                    <h3>Emoção</h3>
-                    <p>Personagens cativantes e situações que vão fazer seu coração acelerar</p>
-                </div>
-                
-                <div class="grid-card">
-                    <h3>Nostalgia</h3>
-                    <p>Referências e homenagens às histórias que você cresceu amando</p>
-                </div>
-                
-                <div class="grid-card">
-                    <h3>Aventura</h3>
-                    <p>Ação constante e reviravoltas que vão manter você grudado na tela</p>
+                <div class="choice-grid">
+                    <div class="choice-card choice-card-1">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Originalidade</h3>
+                        <p>Uma premissa única que você não encontrará em nenhum outro lugar. Uma história que quebra paradigmas e redefine o que é possível na literatura fantástica.</p>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="choice-card choice-card-2">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>Emoção</h3>
+                        <p>Personagens cativantes e situações que vão fazer seu coração acelerar. Cada página é uma montanha-russa emocional que você não vai querer sair.</p>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="choice-card choice-card-3">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Nostalgia</h3>
+                        <p>Referências e homenagens às histórias que você cresceu amando. Uma viagem ao passado que desperta memórias e sentimentos especiais.</p>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="choice-card choice-card-4">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            </svg>
+                        </div>
+                        <h3>Aventura</h3>
+                        <p>Ação constante e reviravoltas que vão manter você grudado na tela. Uma jornada épica que nunca perde o ritmo.</p>
+                        <div class="card-glow"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -422,21 +624,133 @@
 
     <!-- Seção Preview -->
     <section class="section-preview" id="preview">
+        <div class="preview-background">
+            <div class="magical-atmosphere">
+                <div class="floating-word word-1">MAGIA</div>
+                <div class="floating-word word-2">AVENTURA</div>
+                <div class="floating-word word-3">MISTÉRIO</div>
+                <div class="floating-word word-4">PODER</div>
+            </div>
+        </div>
         <div class="container">
-            <h2>Preview do Livro</h2>
-            <div class="preview-content">
-                <div class="preview-text">
-                    <blockquote class="preview-quote">
-                        "Richard Edward Jones olhou para o livro em suas mãos, sentindo o peso das palavras antigas. Havia algo diferente hoje - as páginas pareciam vibrar com uma energia que ele nunca havia sentido antes. Quando ele pronunciou as primeiras palavras do encantamento, o mundo ao seu redor começou a mudar..."
-                    </blockquote>
-                    <p class="preview-info">Leia os primeiros capítulos e descubra por que milhares de leitores já se apaixonaram por esta história única.</p>
+            <div class="preview-header">
+                <div class="preview-badge">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        <path d="M8 7h8"/>
+                        <path d="M8 11h8"/>
+                        <path d="M8 15h5"/>
+                    </svg>
+                    <span>Primeiros Passos</span>
                 </div>
-                <div class="preview-visual">
-                    <div class="book-pages">
-                        <div class="page page-1"></div>
-                        <div class="page page-2"></div>
-                        <div class="page page-3"></div>
-                        <div class="magical-aura"></div>
+                <h2>Preview do Livro</h2>
+                <div class="preview-divider"></div>
+                <p class="preview-subtitle">Toque nas páginas para descobrir os segredos que aguardam</p>
+            </div>
+            
+            <div class="interactive-book-container">
+                <div class="book-stand">
+                    <div class="book-base"></div>
+                    <div class="book-spine"></div>
+                </div>
+                
+                <div class="magical-book">
+                    <div class="book-cover">
+                        <div class="cover-title">REANIMADOR</div>
+                        <div class="cover-subtitle">O Nascimento de um Herói</div>
+                        <div class="cover-author">F.S. Turco</div>
+                        <div class="cover-glow"></div>
+                    </div>
+                    
+                    <div class="book-pages-container">
+                        <div class="page page-1 active" data-content="page1">
+                            <div class="page-content">
+                                <div class="page-header">
+                                    <div class="chapter-number">Capítulo 1</div>
+                                    <div class="chapter-title">O Despertar</div>
+                                </div>
+                                <div class="page-text">
+                                    <p>Richard Edward Jones olhou para o livro em suas mãos, sentindo o peso das palavras antigas. Havia algo diferente hoje - as páginas pareciam vibrar com uma energia que ele nunca havia sentido antes.</p>
+                                    <p>O silêncio da biblioteca era quebrado apenas pelo som das páginas sendo viradas, mas Richard sabia que algo maior estava prestes a acontecer.</p>
+                                </div>
+                                <div class="page-footer">
+                                    <div class="page-number">1</div>
+                                </div>
+                            </div>
+                            <div class="page-glow"></div>
+                        </div>
+                        
+                        <div class="page page-2" data-content="page2">
+                            <div class="page-content">
+                                <div class="page-header">
+                                    <div class="chapter-number">Capítulo 1</div>
+                                    <div class="chapter-title">O Despertar</div>
+                                </div>
+                                <div class="page-text">
+                                    <p>Quando ele pronunciou as primeiras palavras do encantamento, o mundo ao seu redor começou a mudar. As estantes se tornaram árvores antigas, os livros se transformaram em criaturas mágicas, e o ar ficou carregado com a essência da magia.</p>
+                                    <p>"É impossível", sussurrou Richard, mas mesmo assim continuou lendo, fascinado pelo poder que fluía através de suas palavras.</p>
+                                </div>
+                                <div class="page-footer">
+                                    <div class="page-number">2</div>
+                                </div>
+                            </div>
+                            <div class="page-glow"></div>
+                        </div>
+                        
+                        <div class="page page-3" data-content="page3">
+                            <div class="page-content">
+                                <div class="page-header">
+                                    <div class="chapter-number">Capítulo 1</div>
+                                    <div class="chapter-title">O Despertar</div>
+                                </div>
+                                <div class="page-text">
+                                    <p>De repente, uma figura emergiu das páginas - um cavaleiro em armadura brilhante, montado em um cavalo alado. Ele olhou diretamente para Richard e disse com uma voz que ecoava como trovão:</p>
+                                    <p>"Você foi escolhido, Reanimador. Sua jornada para salvar os mundos perdidos começa agora."</p>
+                                </div>
+                                <div class="page-footer">
+                                    <div class="page-number">3</div>
+                                </div>
+                            </div>
+                            <div class="page-glow"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-controls">
+                        <button class="page-btn prev-btn" id="prevPage">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15,18 9,12 15,6"/>
+                            </svg>
+                            <span>Anterior</span>
+                        </button>
+                        <div class="page-indicator">
+                            <span class="current-page">1</span>
+                            <span class="separator">/</span>
+                            <span class="total-pages">3</span>
+                        </div>
+                        <button class="page-btn next-btn" id="nextPage">
+                            <span>Próxima</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9,18 15,12 9,6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="reading-experience">
+                    <div class="experience-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Experiência Única</h3>
+                        <p>Descubra uma narrativa que mistura fantasia, aventura e emoção em cada página. Uma história que vai te transportar para mundos inimagináveis.</p>
+                        <div class="experience-highlights">
+                            <span>📖 400+ Páginas</span>
+                            <span>🎭 25+ Capítulos</span>
+                            <span>✨ Magia Real</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -474,8 +788,10 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="watermark">Made with GAMMA</p>
+            <p class="watermark">Copyright Verzza</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
