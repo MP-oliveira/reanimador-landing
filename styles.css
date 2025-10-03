@@ -553,7 +553,7 @@ body {
     justify-content: center;
 }
 
-/* Seção 4: Uma Experiência Única de Leitura - TOM CLARO */
+/* Seção 4: Uma Experiência Única de Leitura - REDESENHADA */
 .section-4 {
     background: linear-gradient(135deg, #f5f5dc 0%, #e6e6c7 100%);
     padding: 120px 20px;
@@ -561,8 +561,7 @@ body {
     overflow: hidden;
 }
 
-.section-4::before {
-    content: "";
+.experience-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -574,9 +573,373 @@ body {
     z-index: 1;
 }
 
+.reading-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.magic-scroll {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(212, 184, 94, 0.2) 0%, rgba(184, 160, 76, 0.2) 100%);
+    border-radius: 50px;
+    border: 2px solid rgba(212, 184, 94, 0.3);
+    animation: float 10s ease-in-out infinite;
+}
+
+.scroll-1 {
+    width: 120px;
+    height: 60px;
+    top: 15%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.scroll-2 {
+    width: 80px;
+    height: 40px;
+    top: 70%;
+    right: 12%;
+    animation-delay: 3s;
+}
+
+.scroll-3 {
+    width: 100px;
+    height: 50px;
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 6s;
+}
+
 .section-4 .container {
     position: relative;
     z-index: 2;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.experience-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 184, 94, 0.2);
+    border: 1px solid rgba(212, 184, 94, 0.4);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4b85e;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.experience-badge .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.section-4 h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #2a2410;
+    position: relative;
+}
+
+.experience-divider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4b85e 0%, #b8a04c 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.experience-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.experience-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magical-reading-scene {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-pile {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.book {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid #d4b85e;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+.book-1 {
+    background: linear-gradient(135deg, #4a4028 0%, #6a6048 100%);
+    animation-delay: 0s;
+}
+
+.book-2 {
+    background: linear-gradient(135deg, #5a5038 0%, #7a7058 100%);
+    animation-delay: 0.5s;
+}
+
+.book-3 {
+    background: linear-gradient(135deg, #6a6048 0%, #8a8068 100%);
+    animation-delay: 1s;
+}
+
+.book-4 {
+    background: linear-gradient(135deg, #7a7058 0%, #9a9068 100%);
+    animation-delay: 1.5s;
+}
+
+.reading-glow {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background: radial-gradient(circle, rgba(212, 184, 94, 0.3) 0%, transparent 70%);
+    border-radius: 30px;
+    animation: magicalGlow 5s ease-in-out infinite;
+    z-index: 1;
+}
+
+.magical-words {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.word {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.word-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.word-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.6s;
+}
+
+.word-3 {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 1.2s;
+}
+
+.word-4 {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 1.8s;
+}
+
+.word-5 {
+    top: 60%;
+    left: 50%;
+    animation-delay: 2.4s;
+}
+
+.floating-letters {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    pointer-events: none;
+}
+
+.letter {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d4b85e;
+    animation: float 6s ease-in-out infinite;
+}
+
+.letter-1 { top: 5%; left: 5%; animation-delay: 0s; }
+.letter-2 { top: 15%; left: 25%; animation-delay: 0.7s; }
+.letter-3 { top: 25%; left: 45%; animation-delay: 1.4s; }
+.letter-4 { top: 35%; left: 65%; animation-delay: 2.1s; }
+.letter-5 { top: 45%; left: 85%; animation-delay: 2.8s; }
+.letter-6 { top: 65%; left: 80%; animation-delay: 3.5s; }
+.letter-7 { top: 75%; left: 60%; animation-delay: 4.2s; }
+.letter-8 { top: 85%; left: 40%; animation-delay: 4.9s; }
+.letter-9 { top: 95%; left: 20%; animation-delay: 5.6s; }
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.quote-container {
+    position: relative;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: 3px solid rgba(212, 184, 94, 0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-icon svg {
+    width: 20px;
+    height: 20px;
+    color: #2a2410;
+}
+
+.experience-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #2a2410;
+    font-style: italic;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-description {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    border: 2px solid rgba(212, 184, 94, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.description-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.description-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #2a2410;
+}
+
+.experience-description p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #3a3520;
+    font-weight: 400;
+    margin: 0;
+}
+
+.experience-description strong {
+    color: #d4b85e;
+    font-weight: 600;
+}
+
+.reading-benefits {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    border: 2px solid rgba(212, 184, 94, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    flex: 1;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+    border-color: #d4b85e;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon svg {
+    width: 20px;
+    height: 20px;
+    color: #2a2410;
+}
+
+.benefit span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2a2410;
+    text-align: center;
 }
 
 .two-column {
@@ -1457,6 +1820,31 @@ footer {
         transform: translateY(-5px);
     }
     
+    .experience-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+    
+    .magical-reading-scene {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .book-pile {
+        width: 160px;
+        height: 200px;
+    }
+    
+    .reading-benefits {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .benefit {
+        padding: 15px;
+    }
+    
     .grid-2x2 {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1616,5 +2004,42 @@ footer {
     
     .book-author-3d {
         font-size: 0.8rem;
+    }
+    
+    /* Ajustes específicos para seção 4 */
+    .magical-reading-scene {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .book-pile {
+        width: 120px;
+        height: 150px;
+    }
+    
+    .book {
+        height: 35px;
+    }
+    
+    .quote-container {
+        padding: 25px;
+    }
+    
+    .experience-quote {
+        font-size: 1.1rem;
+        padding-left: 15px;
+    }
+    
+    .experience-description {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .experience-description p {
+        font-size: 1.1rem;
+    }
+    
+    .floating-letters {
+        display: none;
     }
 }
