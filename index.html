@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20241203-15">
+    <link rel="stylesheet" href="styles.css?v=20241203-37">
 </head>
 <body>
     <!-- Seção 1: E se as histórias que você amô pudessem ganhar vida? -->
@@ -375,30 +375,39 @@
             <div class="experience-content">
                 <div class="experience-visual">
                     <div class="magical-reading-scene">
-                        <div class="book-pile">
-                            <div class="book book-1"></div>
-                            <div class="book book-2"></div>
-                            <div class="book book-3"></div>
-                            <div class="book book-4"></div>
+                        <div class="floating-books">
+                            <div class="magic-book magic-book-1">
+                                <img src="assets/capa.png" alt="Reanimador - Capa do Livro" class="experience-book-image">
+                                <div class="book-cover-glow"></div>
+                                <div class="book-shadow"></div>
+                            </div>
+                            <div class="magic-book magic-book-2">
+                                <img src="assets/capa.png" alt="Reanimador - Páginas do Livro" class="experience-book-image">
+                                <div class="book-cover-glow"></div>
+                                <div class="book-shadow"></div>
+                            </div>
+                            <div class="magic-book magic-book-3">
+                                <img src="assets/capa.png" alt="Reanimador - Detalhes do Livro" class="experience-book-image">
+                                <div class="book-cover-glow"></div>
+                                <div class="book-shadow"></div>
+                            </div>
                         </div>
-                        <div class="reading-glow"></div>
-                        <div class="magical-words">
-                            <div class="word word-1">✨</div>
-                            <div class="word word-2">📖</div>
-                            <div class="word word-3">✨</div>
-                            <div class="word word-4">🌟</div>
-                            <div class="word word-5">✨</div>
+                        <div class="magical-particles-experience">
+                            <div class="particle-experience particle-exp-1"></div>
+                            <div class="particle-experience particle-exp-2"></div>
+                            <div class="particle-experience particle-exp-3"></div>
+                            <div class="particle-experience particle-exp-4"></div>
+                            <div class="particle-experience particle-exp-5"></div>
                         </div>
-                        <div class="floating-letters">
-                            <div class="letter letter-1">R</div>
-                            <div class="letter letter-2">E</div>
-                            <div class="letter letter-3">A</div>
-                            <div class="letter letter-4">L</div>
-                            <div class="letter letter-5">I</div>
-                            <div class="letter letter-6">D</div>
-                            <div class="letter letter-7">A</div>
-                            <div class="letter letter-8">D</div>
-                            <div class="letter letter-9">E</div>
+                        <div class="reading-aura">
+                            <div class="aura-circle aura-1"></div>
+                            <div class="aura-circle aura-2"></div>
+                            <div class="aura-circle aura-3"></div>
+                        </div>
+                        <div class="magical-elements">
+                            <div class="magic-line line-1"></div>
+                            <div class="magic-line line-2"></div>
+                            <div class="magic-line line-3"></div>
                         </div>
                     </div>
                 </div>
@@ -608,12 +617,8 @@
                 
                 <div class="column image-column">
                     <div class="image-placeholder ebook">
-                        <div class="device-mockup">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
+                        <div class="ebook-image-container">
+                            <img src="assets/ebook.png" alt="E-book Reanimador" class="ebook-image">
                             <div class="magical-effect"></div>
                         </div>
                     </div>
@@ -666,51 +671,21 @@
                     <div class="book-pages-container">
                         <div class="page page-1 active" data-content="page1">
                             <div class="page-content">
-                                <div class="page-header">
-                                    <div class="chapter-number">Capítulo 1</div>
-                                    <div class="chapter-title">O Despertar</div>
-                                </div>
-                                <div class="page-text">
-                                    <p>Richard Edward Jones olhou para o livro em suas mãos, sentindo o peso das palavras antigas. Havia algo diferente hoje - as páginas pareciam vibrar com uma energia que ele nunca havia sentido antes.</p>
-                                    <p>O silêncio da biblioteca era quebrado apenas pelo som das páginas sendo viradas, mas Richard sabia que algo maior estava prestes a acontecer.</p>
-                                </div>
-                                <div class="page-footer">
-                                    <div class="page-number">1</div>
-                                </div>
+                                <img src="assets/pag1.jpeg" alt="Página 1 do Livro Reanimador" class="page-image" onclick="openPageModal('assets/pag1.jpeg')">
                             </div>
                             <div class="page-glow"></div>
                         </div>
                         
                         <div class="page page-2" data-content="page2">
                             <div class="page-content">
-                                <div class="page-header">
-                                    <div class="chapter-number">Capítulo 1</div>
-                                    <div class="chapter-title">O Despertar</div>
-                                </div>
-                                <div class="page-text">
-                                    <p>Quando ele pronunciou as primeiras palavras do encantamento, o mundo ao seu redor começou a mudar. As estantes se tornaram árvores antigas, os livros se transformaram em criaturas mágicas, e o ar ficou carregado com a essência da magia.</p>
-                                    <p>"É impossível", sussurrou Richard, mas mesmo assim continuou lendo, fascinado pelo poder que fluía através de suas palavras.</p>
-                                </div>
-                                <div class="page-footer">
-                                    <div class="page-number">2</div>
-                                </div>
+                                <img src="assets/pag2.jpeg" alt="Página 2 do Livro Reanimador" class="page-image" onclick="openPageModal('assets/pag2.jpeg')">
                             </div>
                             <div class="page-glow"></div>
                         </div>
                         
                         <div class="page page-3" data-content="page3">
                             <div class="page-content">
-                                <div class="page-header">
-                                    <div class="chapter-number">Capítulo 1</div>
-                                    <div class="chapter-title">O Despertar</div>
-                                </div>
-                                <div class="page-text">
-                                    <p>De repente, uma figura emergiu das páginas - um cavaleiro em armadura brilhante, montado em um cavalo alado. Ele olhou diretamente para Richard e disse com uma voz que ecoava como trovão:</p>
-                                    <p>"Você foi escolhido, Reanimador. Sua jornada para salvar os mundos perdidos começa agora."</p>
-                                </div>
-                                <div class="page-footer">
-                                    <div class="page-number">3</div>
-                                </div>
+                                <img src="assets/pag3.jpeg" alt="Página 3 do Livro Reanimador" class="page-image" onclick="openPageModal('assets/pag3.jpeg')">
                             </div>
                             <div class="page-glow"></div>
                         </div>
@@ -791,6 +766,19 @@
             <p class="watermark">Copyright Verzza</p>
         </div>
     </footer>
+
+    <!-- Modal para visualização das páginas -->
+    <div id="pageModal" class="page-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePageModal()">&times;</span>
+            <img id="modalImage" src="" alt="Página do Livro" class="modal-page-image">
+            <div class="modal-controls">
+                <button class="modal-btn" onclick="navigateModal(-1)">← Anterior</button>
+                <button class="modal-btn" onclick="navigateModal(1)">Próxima →</button>
+                <button class="modal-btn" onclick="closePageModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

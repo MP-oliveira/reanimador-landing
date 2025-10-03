@@ -1000,14 +1000,18 @@ body {
 }
 
 .image-placeholder.ebook {
-    background: linear-gradient(135deg, #2a2858 0%, #4a4878 100%);
-    aspect-ratio: auto;
+    background: transparent;
+    aspect-ratio: 3/4;
     height: fit-content;
-    min-height: 300px;
-    max-height: 350px;
+    min-height: 370px;
+    max-height: 400px;
+    max-width: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
+    padding: 0;
+    margin-left: 100px;
 }
 
 .device-mockup {
@@ -1024,6 +1028,23 @@ body {
     height: 80px;
     color: #d4b85e;
     animation: float 3s ease-in-out infinite;
+}
+
+/* E-book Image Container */
+.ebook-image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ebook-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .magical-effect {
@@ -3195,7 +3216,7 @@ footer {
 }
 
 .page-content {
-    padding: 40px;
+    padding: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -3287,7 +3308,7 @@ footer {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: all 0.3s ease;
 }
 
@@ -3300,7 +3321,7 @@ footer {
 
 .page-btn:disabled {
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: not-allowed !important;
     transform: none;
 }
 
@@ -3475,4 +3496,412 @@ footer {
     object-position: center;
     border-radius: 10px;
     display: block;
+}
+
+/* Seção 4: Nova Visualização - Livros Mágicos Flutuantes com Imagens */
+.floating-books {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 50px 0;
+}
+
+.magic-book {
+    position: absolute;
+    width: 220px;
+    height: 330px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    animation: float 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+.magic-book-1 {
+    top: 40px;
+    left: -5%;
+    animation-delay: 0s;
+    transform: rotateY(-15deg) rotateX(5deg);
+}
+
+.magic-book-2 {
+    top: 70px;
+    left: 65%;
+    animation-delay: 2s;
+    transform: rotateY(15deg) rotateX(-5deg);
+}
+
+.magic-book-3 {
+    top: 30px;
+    left: 32%;
+    animation-delay: 4s;
+    transform: rotateY(-5deg) rotateX(10deg);
+}
+
+.experience-book-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 12px;
+}
+
+.book-cover-glow {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(45deg, rgba(212, 184, 94, 0.6), rgba(184, 160, 76, 0.4), rgba(212, 184, 94, 0.6));
+    border-radius: 20px;
+    z-index: -1;
+    animation: magicalGlow 4s ease-in-out infinite;
+    filter: blur(2px);
+}
+
+.book-shadow {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 20px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -2;
+}
+
+.magical-particles-experience {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle-experience {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #d4b85e;
+    border-radius: 50%;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.particle-exp-1 {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0.5s;
+}
+
+.particle-exp-2 {
+    top: 60%;
+    left: 80%;
+    animation-delay: 1.5s;
+}
+
+.particle-exp-3 {
+    top: 80%;
+    left: 30%;
+    animation-delay: 2.5s;
+}
+
+.particle-exp-4 {
+    top: 30%;
+    left: 70%;
+    animation-delay: 3.5s;
+}
+
+.particle-exp-5 {
+    top: 70%;
+    left: 50%;
+    animation-delay: 4.5s;
+}
+
+.reading-aura {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.aura-circle {
+    position: absolute;
+    border: 2px solid rgba(212, 184, 94, 0.3);
+    border-radius: 50%;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.aura-1 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 0s;
+}
+
+.aura-2 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 1.3s;
+}
+
+.aura-3 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 2.6s;
+}
+
+.magical-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.magic-line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4b85e, transparent);
+    animation: magicFlow 4s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.line-1 {
+    width: 200px;
+    top: 25%;
+    left: 10%;
+    animation-delay: 1s;
+    transform: rotate(15deg);
+}
+
+.line-2 {
+    width: 150px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2.5s;
+    transform: rotate(-20deg);
+}
+
+.line-3 {
+    width: 180px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+    transform: rotate(10deg);
+}
+
+@keyframes magicFlow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scaleX(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scaleX(1.2);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.6;
+    }
+}
+
+/* Estilo para imagens das páginas do preview */
+.page-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.page-image:hover {
+    transform: scale(1.02);
+}
+
+/* Forçar visibilidade das páginas ativas no preview */
+.book-pages-container .page.active {
+    opacity: 1 !important;
+    transform: rotateY(0deg) !important;
+    z-index: 10 !important;
+    display: block !important;
+}
+
+.book-pages-container .page:not(.active) {
+    opacity: 0 !important;
+    transform: rotateY(-180deg) !important;
+    z-index: 1 !important;
+}
+
+/* Modal para visualização das páginas */
+.page-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    margin: 2% auto;
+    padding: 20px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #d4b85e;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #b8a04c;
+}
+
+.modal-page-image {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.modal-btn {
+    background: linear-gradient(135deg, #d4b85e 0%, #b8a04c 100%);
+    color: #2a2410;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(212, 184, 94, 0.3);
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 184, 94, 0.4);
+}
+
+.modal-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsividade do modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        height: 95%;
+        padding: 10px;
+    }
+    
+    .close-modal {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+    
+    .modal-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .modal-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Responsividade para livros maiores */
+@media (max-width: 768px) {
+    .floating-books {
+        height: 450px;
+    }
+    
+    .magic-book {
+        width: 150px;
+        height: 225px;
+    }
+    
+    .magic-book-1 {
+        top: 25px;
+        left: -3%;
+        transform: rotateY(-10deg) rotateX(3deg);
+    }
+    
+    .magic-book-2 {
+        top: 50px;
+        left: 62%;
+        transform: rotateY(10deg) rotateX(-3deg);
+    }
+    
+    .magic-book-3 {
+        top: 35px;
+        left: 28%;
+        transform: rotateY(-3deg) rotateX(5deg);
+    }
+    
+    .magic-line {
+        height: 1px;
+    }
+    
+    .line-1 {
+        width: 120px;
+        top: 20%;
+        left: 5%;
+    }
+    
+    .line-2 {
+        width: 100px;
+        top: 65%;
+        right: 10%;
+    }
+    
+    .line-3 {
+        width: 140px;
+        bottom: 15%;
+        left: 15%;
+    }
 }

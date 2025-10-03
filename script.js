@@ -65,44 +65,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Sistema de livro interativo para Preview
 document.addEventListener('DOMContentLoaded', function() {
-    const pages = document.querySelectorAll('.page');
+    const pages = document.querySelectorAll('.book-pages-container .page');
     const prevBtn = document.getElementById('prevPage');
     const nextBtn = document.getElementById('nextPage');
     const currentPageSpan = document.querySelector('.current-page');
     let currentPageIndex = 0;
     
+    console.log('Páginas encontradas:', pages.length);
+    console.log('Botão anterior:', prevBtn);
+    console.log('Botão próximo:', nextBtn);
+
     // Função para mostrar página específica
     function showPage(index) {
-        // Remover classe active de todas as páginas
-        pages.forEach(page => page.classList.remove('active'));
+        console.log('Mostrando página:', index);
         
+        // Remover classe active de todas as páginas
+        pages.forEach(page => {
+            page.classList.remove('active');
+        });
+
         // Adicionar classe active na página atual
         if (pages[index]) {
             pages[index].classList.add('active');
             currentPageIndex = index;
-            currentPageSpan.textContent = index + 1;
             
+            if (currentPageSpan) {
+                currentPageSpan.textContent = index + 1;
+            }
+
             // Atualizar botões
-            prevBtn.disabled = index === 0;
-            nextBtn.disabled = index === pages.length - 1;
+            if (prevBtn) {
+                prevBtn.disabled = index === 0;
+                prevBtn.style.opacity = index === 0 ? '0.5' : '1';
+            }
+            if (nextBtn) {
+                nextBtn.disabled = index === pages.length - 1;
+                nextBtn.style.opacity = index === pages.length - 1 ? '0.5' : '1';
+            }
         }
     }
     
     // Event listeners para os botões
     if (prevBtn) {
         prevBtn.addEventListener('click', function() {
+            console.log('Botão anterior clicado! Página atual:', currentPageIndex);
             if (currentPageIndex > 0) {
                 showPage(currentPageIndex - 1);
             }
         });
+    } else {
+        console.log('Botão anterior não encontrado!');
     }
     
     if (nextBtn) {
         nextBtn.addEventListener('click', function() {
+            console.log('Botão próximo clicado! Página atual:', currentPageIndex);
             if (currentPageIndex < pages.length - 1) {
                 showPage(currentPageIndex + 1);
             }
         });
+    } else {
+        console.log('Botão próximo não encontrado!');
     }
     
     // Event listeners para navegação por teclado
@@ -149,4 +172,59 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mostrar primeira página por padrão
     showPage(0);
+});
+
+// Funções para o modal de visualização das páginas
+let currentModalPage = 0;
+const modalPages = ['assets/pag1.jpeg', 'assets/pag2.jpeg', 'assets/pag3.jpeg'];
+
+function openPageModal(imageSrc) {
+    const modal = document.getElementById('pageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    // Encontrar qual página foi clicada
+    currentModalPage = modalPages.indexOf(imageSrc);
+    
+    modalImage.src = imageSrc;
+    modal.style.display = 'block';
+    
+    // Adicionar evento para fechar com ESC
+    document.addEventListener('keydown', handleModalKeydown);
+}
+
+function closePageModal() {
+    const modal = document.getElementById('pageModal');
+    modal.style.display = 'none';
+    
+    // Remover evento do ESC
+    document.removeEventListener('keydown', handleModalKeydown);
+}
+
+function navigateModal(direction) {
+    currentModalPage += direction;
+    
+    // Limitar entre 0 e 2
+    if (currentModalPage < 0) currentModalPage = 0;
+    if (currentModalPage > 2) currentModalPage = 2;
+    
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = modalPages[currentModalPage];
+}
+
+function handleModalKeydown(e) {
+    if (e.key === 'Escape') {
+        closePageModal();
+    } else if (e.key === 'ArrowLeft') {
+        navigateModal(-1);
+    } else if (e.key === 'ArrowRight') {
+        navigateModal(1);
+    }
+}
+
+// Fechar modal clicando fora da imagem
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('pageModal');
+    if (e.target === modal) {
+        closePageModal();
+    }
 });
