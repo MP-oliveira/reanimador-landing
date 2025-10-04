@@ -9,6 +9,7 @@ import ChoiceSection from '../components/ChoiceSection'
 import AmazonSection from '../components/AmazonSection'
 import PreviewSection from '../components/PreviewSection'
 import FinalSection from '../components/FinalSection'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -44,6 +45,7 @@ export default function Home() {
       <div id="final">
         <FinalSection />
       </div>
+      <Footer />
     </>
   )
 }

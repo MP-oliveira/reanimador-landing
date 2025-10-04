@@ -23,12 +23,21 @@ const TopBar = () => {
         const section = document.getElementById(sections[i]);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            currentActive = sections[i];
-            break;
+          // Para a seção final, usar uma lógica mais permissiva
+          if (sections[i] === 'final') {
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+              currentActive = sections[i];
+              break;
+            }
+          } else {
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+              currentActive = sections[i];
+              break;
+            }
           }
         }
       }
+      console.log('Current active section:', currentActive);
       setActiveSection(currentActive);
     };
 
@@ -53,7 +62,7 @@ const TopBar = () => {
           <span className={`${styles.navText} ${activeSection === 'choice' ? styles.active : ''}`} onClick={() => scrollToSection('choice')}>Escolher</span>
           <span className={`${styles.navText} ${activeSection === 'amazon' ? styles.active : ''}`} onClick={() => scrollToSection('amazon')}>Amazon</span>
           <span className={`${styles.navText} ${activeSection === 'preview' ? styles.active : ''}`} onClick={() => scrollToSection('preview')}>Preview</span>
-          <span className={`${styles.navText} ${activeSection === 'final' ? styles.active : ''}`} onClick={() => scrollToSection('final')}>Final</span>
+          <span className={`${styles.navText} ${activeSection === 'final' ? styles.active : ''}`} onClick={() => scrollToSection('final')}>Comece hoje</span>
         </button>
       </div>
     </nav>
