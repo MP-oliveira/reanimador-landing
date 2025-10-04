@@ -2,8 +2,7 @@
 .topBar {
   position: fixed;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 20px;
   z-index: 1000;
 }
 
@@ -100,8 +99,7 @@
 .mobileDropdown {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;
   background: rgba(0, 0, 0, 0.9);
   border: 2px solid rgba(212, 184, 94, 0.8);
   border-radius: 15px;
@@ -115,14 +113,14 @@
   min-width: 200px;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-50%) translateY(-10px);
+  transform: translateY(-10px);
   transition: all 0.3s ease;
 }
 
 .mobileDropdown.open {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 .mobileDropdown .navText {
@@ -166,9 +164,7 @@
 @media (max-width: 480px) {
   .topBar {
     top: 10px;
-    left: 10px;
     right: 10px;
-    transform: none;
   }
   
   .hamburgerButton {
@@ -180,14 +176,8 @@
   }
   
   .mobileDropdown {
-    left: 0;
-    right: 0;
-    transform: none;
+    right: -10px;
     margin-top: 5px;
     border-radius: 10px;
-  }
-  
-  .mobileDropdown.open {
-    transform: none;
   }
 }
