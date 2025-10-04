@@ -300,8 +300,25 @@
         min-height: auto;
     }
     
+    .heroContent {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .heroButtons {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .btn {
+        flex: 1;
+        justify-content: center;
+        max-width: 240px;
+    }
+    
     .magicalBook {
         width: 250px;
         height: 333px;
+        margin: 0 auto;
     }
 }
