@@ -135,7 +135,6 @@
 .storyBlock:hover {
     background: rgba(184, 160, 76, 0.1);
     border-color: #d4b85e;
-    transform: translateX(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
