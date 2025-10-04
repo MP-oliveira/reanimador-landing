@@ -183,8 +183,8 @@
 
 .magicalBookContainer {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 466px;
 }
 
 .bookGlow {
@@ -365,8 +365,8 @@
     }
     
     .magicalBookContainer {
-        width: 200px;
-        height: 280px;
+        width: 250px;
+        height: 333px;
     }
     
     .storyBlock {
