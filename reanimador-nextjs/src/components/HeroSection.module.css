@@ -60,7 +60,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 40px;
-    margin-left: -20px;
 }
 
 .container {
@@ -288,6 +287,7 @@
 @media (max-width: 768px) {
     .heroContainer {
         padding-top: 30px; /* Reduz de 100px para 30px (70px para cima) */
+        margin-left: -20px; /* Move 20px para a esquerda APENAS no mobile */
     }
     
     .container {
