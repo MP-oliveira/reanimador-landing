@@ -370,7 +370,7 @@
     }
     
     .storyBlock:hover {
-        transform: translateY(-5px);
+        /* transform removido para evitar movimento dos cards */
     }
     
     .storyBlock p {
