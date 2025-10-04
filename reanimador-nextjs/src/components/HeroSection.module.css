@@ -286,6 +286,10 @@
 
 /* Responsive - EXATO DO ORIGINAL */
 @media (max-width: 768px) {
+    .heroContainer {
+        padding-top: 30px; /* Reduz de 100px para 30px (70px para cima) */
+    }
+    
     .container {
         grid-template-columns: 1fr;
         gap: 40px;
