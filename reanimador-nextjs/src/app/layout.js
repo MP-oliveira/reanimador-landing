@@ -3,6 +3,11 @@ import "./globals.css";
 export const metadata = {
   title: "Reanimador - O Nascimento de um Herói | F.S. Turco",
   description: "Reanimador - Uma aventura de fantasia onde as histórias ganham vida. Descubra o poder de dar vida às lendas.",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }) {
