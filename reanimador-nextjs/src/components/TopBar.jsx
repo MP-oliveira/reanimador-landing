@@ -15,7 +15,7 @@ const TopBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'journey', 'power', 'discovery', 'author', 'experience', 'choice', 'amazon', 'preview'];
+      const sections = ['hero', 'journey', 'power', 'discovery', 'author', 'experience', 'choice', 'amazon', 'preview', 'final'];
       
       let currentActive = 'hero';
 
@@ -53,6 +53,7 @@ const TopBar = () => {
           <span className={`${styles.navText} ${activeSection === 'choice' ? styles.active : ''}`} onClick={() => scrollToSection('choice')}>Escolher</span>
           <span className={`${styles.navText} ${activeSection === 'amazon' ? styles.active : ''}`} onClick={() => scrollToSection('amazon')}>Amazon</span>
           <span className={`${styles.navText} ${activeSection === 'preview' ? styles.active : ''}`} onClick={() => scrollToSection('preview')}>Preview</span>
+          <span className={`${styles.navText} ${activeSection === 'final' ? styles.active : ''}`} onClick={() => scrollToSection('final')}>Final</span>
         </button>
       </div>
     </nav>

@@ -8,6 +8,7 @@ import AuthorSection from '../components/AuthorSection'
 import ChoiceSection from '../components/ChoiceSection'
 import AmazonSection from '../components/AmazonSection'
 import PreviewSection from '../components/PreviewSection'
+import FinalSection from '../components/FinalSection'
 
 export default function Home() {
   return (
@@ -40,7 +41,9 @@ export default function Home() {
       <div id="preview">
         <PreviewSection />
       </div>
-      {/* Outras seções virão aqui */}
+      <div id="final">
+        <FinalSection />
+      </div>
     </>
   )
 }
