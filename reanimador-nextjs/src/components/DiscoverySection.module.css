@@ -473,10 +473,11 @@
     
     .discoveryOrbits {
         position: absolute;
-        top: 50%;
+        top: calc(50% - 200px); /* Sobe 200px */
         left: 50%;
         transform: translate(-50%, -50%);
         height: 100%;
+        margin: 0 auto; /* Centraliza no mobile */
     }
     
     .orbit {
