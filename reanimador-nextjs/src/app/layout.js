@@ -8,6 +8,11 @@ export const metadata = {
     shortcut: '/favicon.ico',
     apple: '/favicon.png',
   },
+  other: {
+    'Cache-Control': 'no-cache, no-store, must-revalidate',
+    'Pragma': 'no-cache',
+    'Expires': '0'
+  }
 };
 
 export default function RootLayout({ children }) {
