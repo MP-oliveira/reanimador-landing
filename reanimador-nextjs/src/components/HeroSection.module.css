@@ -283,49 +283,138 @@
     50% { box-shadow: 0 0 40px rgba(212, 184, 94, 0.6), 0 0 60px rgba(212, 184, 94, 0.3); }
 }
 
-/* Responsive - EXATO DO ORIGINAL */
+/* Mobile First - Classes específicas para mobile */
 @media (max-width: 768px) {
+    .heroSection {
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
     .heroContainer {
-        padding-top: 30px; /* Reduz de 100px para 30px (70px para cima) */
-        margin-left: -20px; /* Move 20px para a esquerda APENAS no mobile */
+        padding: 20px 15px;
+        max-width: 100%;
+        margin-left: -20px;
     }
     
     .container {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 0 20px;
-    }
-    
-    .sectionTitleLarge {
-        font-size: 2.5rem;
-    }
-    
-    .heroSection {
-        padding: 80px 20px;
-        min-height: auto;
+        gap: 30px;
+        padding: 0;
     }
     
     .heroContent {
-        max-width: 500px;
-        margin: 0 auto;
+        text-align: center;
+        max-width: 100%;
+        margin: 0;
+        padding: 0 10px;
+    }
+    
+    .bookBadge {
+        margin: 0 auto 15px auto;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .sectionSubtitle {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .sectionTitleLarge {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    }
+    
+    .heroDescription {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        padding: 0 5px;
     }
     
     .heroButtons {
-        max-width: 500px;
-        margin: 0 auto;
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        width: 100%;
+        max-width: 100%;
     }
     
     .btn {
         width: 100%;
         justify-content: center;
-        max-width: none;
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .heroVisual {
+        order: -1;
+        margin-bottom: 20px;
     }
     
     .magicalBook {
-        width: 400px;
-        height: 555px;
+        width: 300px;
+        height: 416px;
         margin: 0 auto;
+    }
+    
+    .magicalGlow {
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        filter: blur(15px);
+    }
+    
+    .floatingParticles {
+        display: none;
+    }
+    
+    .magicalBorder {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+/* Mobile pequeno - telas muito pequenas */
+@media (max-width: 480px) {
+    .heroSection {
+        padding: 40px 0;
+    }
+    
+    .heroContainer {
+        padding: 15px 10px;
+        margin-left: -20px;
+    }
+    
+    .sectionTitleLarge {
+        font-size: 1.8rem;
+    }
+    
+    .sectionSubtitle {
+        font-size: 1.1rem;
+    }
+    
+    .heroDescription {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+    
+    .magicalBook {
+        width: 220px;
+        height: 305px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .bookBadge {
+        font-size: 0.75rem;
+        padding: 5px 10px;
     }
 }
