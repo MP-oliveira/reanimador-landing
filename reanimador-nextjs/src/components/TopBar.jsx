@@ -75,13 +75,13 @@ const TopBar = () => {
 
         {/* Menu Mobile - Hambúrguer */}
         <div className={styles.mobileMenu}>
-          <button className={`${styles.hamburgerButton} ${isMenuOpen ? ` ${styles.active}` : ''}`} onClick={toggleMenu}>
+          <button className={`${styles.hamburgerButton}${isMenuOpen ? ` ${styles.active}` : ''}`} onClick={toggleMenu}>
             <span className={styles.hamburgerLine}></span>
             <span className={styles.hamburgerLine}></span>
             <span className={styles.hamburgerLine}></span>
           </button>
           
-          <div className={`${styles.mobileDropdown} ${isMenuOpen ? styles.open : ''}`}>
+          <div className={`${styles.mobileDropdown}${isMenuOpen ? ` ${styles.open}` : ''}`}>
             <span className={`${styles.navText}${activeSection === 'hero' ? ` ${styles.active}` : ''}`} onClick={() => scrollToSection('hero')}>Início</span>
             <span className={`${styles.navText}${activeSection === 'journey' ? ` ${styles.active}` : ''}`} onClick={() => scrollToSection('journey')}>Jornada</span>
             <span className={`${styles.navText}${activeSection === 'power' ? ` ${styles.active}` : ''}`} onClick={() => scrollToSection('power')}>Poder</span>
