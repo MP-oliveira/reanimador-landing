@@ -57,8 +57,8 @@ export default function HeroSection() {
               <Image 
                 src="/assets/capa.png" 
                 alt="Reanimador - O Nascimento de um Herói" 
-                width={400}
-                height={555}
+                width={360}
+                height={499}
                 className={styles.bookCoverImage}
                 priority
                 quality={100}
