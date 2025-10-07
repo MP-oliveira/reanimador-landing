@@ -29,7 +29,10 @@ export default function HeroSection() {
             <span>Fantasia & Aventura</span>
           </div>
           
-          <h3 className={styles.sectionSubtitle}>Reanimador - O Nascimento de um Herói</h3>
+          <div className={styles.titleContainer}>
+            <h3 className={styles.sectionSubtitle}>Reanimador</h3>
+            <h4 className={styles.bookSubtitle}>O Nascimento de um Herói</h4>
+          </div>
           <h1 className={styles.sectionTitleLarge}>E se as histórias que você amou pudessem ganhar vida?</h1>
           <p className={styles.heroDescription}>Descubra um mundo onde a imaginação se torna realidade e cada página traz uma nova aventura à vida</p>
           
